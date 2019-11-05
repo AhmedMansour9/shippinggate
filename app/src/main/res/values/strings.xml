@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Shoping Gate</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">LOG IN  </string>
+    <string name="forgetpassword">Forget Password ?</string>
+    <string name="face">LOGIN WITH FACEBOOK</string>
+    <string name="google">LOGIN WITH Google</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="signup">SIGN UP</string>
+    <string name="signin">SIGN IN</string>
+    <string name="shipdate">Buying your stuff with ud \n in just 3 steps</string>
+    <string name="or">OR</string>
+    <string name="persnoalinformation">Personal Information</string>
+    <string name="birth">Birth Date</string>
+    <string name="e_country">Country</string>
+    <string name="e_city">City</string>
+    <string name="street">Street</string>
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="search">Search ...</string>
+    <string name="bestoffer">Best Offer</string>
+    <string name="popularproducts">Popular Products</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="allcategories">All Categories</string>
+    <string name="seeall">See All</string>
+    <string name="logout">Log Out</string>
+    <string name="upto">Up to</string>
+    <string name="of">off</string>
+
+
+</resources>

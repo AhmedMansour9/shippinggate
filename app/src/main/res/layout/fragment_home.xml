@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:id="@+id/Constrain_Home"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHome"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/darkblue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_190sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/bc_search"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+
+            <EditText
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:hint="@string/search"
+                android:textColor="#9b9b9b"
+                android:background="@android:color/transparent"
+                android:paddingStart="@dimen/_30sdp"
+                android:textColorHint="#CCCCCC"
+                android:maxLines="1"
+                android:textSize="@dimen/_13sdp"
+
+                android:id="@+id/E_Search"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_search"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:id="@+id/img_search"
+                />
+
+        </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/icon_cart"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                app:srcCompat="@drawable/icon_carthome" />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbarHome"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+
+        android:id="@+id/SwipHome"
+        >
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="409dp"
+            android:layout_height="180dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarHome">
+
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/view_pager_circle_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/_110sdp"
+        app:ci_height="7dp"
+        app:ci_width="7dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_Categroies"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:overScrollMode="never"
+        android:layout_below="@+id/SwipHome"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:scrollbars="horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_Categroies"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:id="@+id/T_BestDiamond"
+        android:text="@string/bestoffer"
+        android:textColor="#10435f"
+        android:textSize="@dimen/_16sdp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_BestOffer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_below="@+id/T_BestDiamond"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_BestOffer"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/T_Popularproducts"
+                android:text="@string/popularproducts"
+                android:textColor="#10435f"
+                android:textSize="@dimen/_16sdp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_BestOffer"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/T_AllPopular"
+                android:layout_alignParentEnd="true"
+                android:text="@string/seeall"
+                android:textColor="#ffb558"
+                android:textSize="@dimen/_16sdp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_PopularProducts"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_below="@+id/T_Popularproducts"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
