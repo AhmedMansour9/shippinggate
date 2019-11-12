@@ -20,11 +20,11 @@ class Splash : AppCompatActivity() {
         Handler().postDelayed({
             val UserToken: String? =DataSaver.getString("token",null);
             if(UserToken!=null) {
-//                val intent = Intent(this, Navigation::class.java)
-//                startActivity(intent)
-//                finish()
-            }else {
                 val intent = Intent(this, Navigation::class.java)
+                startActivity(intent)
+                finish()
+            }else {
+                val intent = Intent(this, Login::class.java)
                 startActivity(intent)
                 finish()
             }

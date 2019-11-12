@@ -4,5 +4,6 @@
 
     <size android:width="@dimen/_50sdp" android:height="@dimen/_50sdp"/>
     <gradient android:startColor="#fff" android:endColor="#fff"/>
-    <corners android:radius="@dimen/_150sdp"/>
+    <corners android:topRightRadius="@dimen/_150sdp" android:bottomLeftRadius="@dimen/_150sdp"
+         android:bottomRightRadius="@dimen/_150sdp"/>
 </shape>

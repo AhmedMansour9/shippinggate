@@ -42,6 +42,39 @@
     <string name="logout">Log Out</string>
     <string name="upto">Up to</string>
     <string name="of">off</string>
+    <string-array name="sorts">
+        <item>New Arrivals</item>
+        <item>Popularilty</item>
+        <item>Top Rated</item>
+        <item>Price Low to High</item>
+        <item>Price High To Low</item>
+
+    </string-array>
+    <string name="cancel">Cancel</string>
+    <string name="mywishlist">My Wishlist</string>
+    <string name="myorders">My Orders</string>
+    <string name="sharewithfriends">Share WIth Friends</string>
+    <string name="language">Language</string>
+    <string name="rateus">Rate Us</string>
+    <string name="descrption">Description</string>
+    <string name="addtocart">Add To Cart</string>
+    <string name="solidby">Sloid by: </string>
+    <string name="sellernote">Seller Note: </string>
+    <string name="reviwes">Reviwes</string>
+    <string name="writereview">Write Review</string>
+    <string name="peoplealseviwed">People Also Viewed</string>
+    <string name="confirm">Confirm</string>
+    <string name="edit">Edit</string>
+    <string name="filtertion">Filtertion</string>
+    <string name="category">Category</string>
+    <string name="brand">Brand</string>
+    <string name="price">Price</string>
+    <string name="minprice">Min Price</string>
+    <string name="maxprice">Max Price</string>
+    <string name="emailisused">Email is Already Exist</string>
+    <string name="wrongemailorpass">Wrong Email or Password</string>
+    <string name="nointernet">No Internet Connection</string>
+    <string name="details">Dettails</string>
 
 
 </resources>

@@ -79,14 +79,14 @@
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
+        android:layout_height="@dimen/_170sdp"
 
         android:id="@+id/SwipHome"
         >
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
-            android:layout_width="409dp"
-            android:layout_height="180dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
@@ -101,14 +101,14 @@
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="@dimen/_110sdp"
+        android:layout_marginTop="@dimen/_130sdp"
         app:ci_height="7dp"
         app:ci_width="7dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_Categroies"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_90sdp"
+        android:layout_height="@dimen/_70sdp"
         android:overScrollMode="never"
         android:layout_below="@+id/SwipHome"
         android:layout_marginStart="@dimen/_10sdp"
@@ -125,13 +125,26 @@
         android:id="@+id/T_BestDiamond"
         android:text="@string/bestoffer"
         android:textColor="#10435f"
-        android:textSize="@dimen/_16sdp"
+        android:textSize="@dimen/_14sdp"
         />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_Categroies"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/T_AllOffers"
+                android:layout_alignParentEnd="true"
+                android:text="@string/seeall"
+                android:textColor="#ffb558"
+                android:textSize="@dimen/_14sdp"
+                />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_BestOffer"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_120sdp"
+        android:layout_height="@dimen/_180sdp"
         android:layout_below="@+id/T_BestDiamond"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
@@ -146,7 +159,7 @@
                 android:id="@+id/T_Popularproducts"
                 android:text="@string/popularproducts"
                 android:textColor="#10435f"
-                android:textSize="@dimen/_16sdp"
+                android:textSize="@dimen/_14sdp"
                 />
 
             <TextView
@@ -159,13 +172,13 @@
                 android:layout_alignParentEnd="true"
                 android:text="@string/seeall"
                 android:textColor="#ffb558"
-                android:textSize="@dimen/_16sdp"
+                android:textSize="@dimen/_14sdp"
                 />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_PopularProducts"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_120sdp"
+                android:layout_height="@dimen/_200sdp"
                 android:layout_below="@+id/T_Popularproducts"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"

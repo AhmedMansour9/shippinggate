@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Fragments.Filtertion_Fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarFiltertion"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/darkblue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/filtertion"
+                android:textColor="#fff"
+                android:textStyle="bold"
+
+                />
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f8f8f8"
+        android:text="@string/category"
+        android:textColor="#6b6b6b"
+        android:padding="@dimen/_5sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:id="@+id/T_Category"
+        android:layout_below="@+id/toolbarFiltertion"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_Categories"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_below="@+id/T_Category"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f8f8f8"
+        android:text="@string/brand"
+        android:textColor="#6b6b6b"
+        android:paddingStart="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/T_Brand"
+        android:layout_below="@+id/recycler_Categories"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_Brands"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_below="@+id/T_Brand"
+        />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f8f8f8"
+                android:text="@string/price"
+                android:textColor="#6b6b6b"
+                android:padding="@dimen/_5sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:id="@+id/T_Priice"
+                android:layout_below="@+id/recycler_Brands"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/T_MinPrice"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/T_Priice"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:hint="@string/minprice"
+                android:textColorHint="#10435f"
+                android:layout_marginTop="@dimen/_30sdp">
+
+                <EditText
+                    android:id="@+id/E_MinPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:inputType="number"
+                    android:textColor="#8d8d8d"
+                    android:textColorHint="#8d8d8d"
+                    android:maxLength="18"
+                    android:backgroundTint="#706e6f"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/T_MaxPrice"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/T_Priice"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:hint="@string/maxprice"
+                android:layout_alignParentEnd="true"
+                android:textColorHint="#10435f"
+                android:layout_marginTop="@dimen/_30sdp">
+
+                <EditText
+                    android:id="@+id/E_Miaxprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:inputType="number"
+                    android:textColor="#8d8d8d"
+                    android:textColorHint="#8d8d8d"
+                    android:maxLength="18"
+                    android:backgroundTint="#706e6f"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:background="#ffb558"
+              android:layout_alignParentBottom="true"
+              android:id="@+id/Rela_Filter"
+              android:layout_below="@+id/T_MaxPrice"
+              android:layout_marginTop="@dimen/_65sdp"
+              android:layout_height="@dimen/_40sdp" >
+
+              <ImageView
+                  android:layout_width="@dimen/_15sdp"
+                  android:layout_height="@dimen/_12sdp"
+                  android:layout_centerInParent="true"
+                  android:src="@drawable/white_arrow"
+
+                  />
+
+
+
+          </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

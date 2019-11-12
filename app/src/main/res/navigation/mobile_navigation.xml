@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.shoppinggate.Activites.ui.home.HomeFragment"
+        android:name="com.shoppinggate.Fragments.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
@@ -17,26 +17,32 @@
         tools:layout="@layout/fragment_categories" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.shoppinggate.Activites.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_mywishlist"
+        android:name="com.shoppinggate.Fragments.MyWishlist_Fragment"
+        android:label="@string/mywishlist"
+        tools:layout="@layout/fragment_my_wishlist_" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.shoppinggate.Activites.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        android:id="@+id/nav_myorders"
+        android:name="com.shoppinggate.Fragments.MyOrders"
+        android:label="@string/myorders"
+        tools:layout="@layout/fragment_my_orders" />
 
-    <fragment
-        android:id="@+id/nav_share"
+    <activity
+        android:id="@+id/nav_language"
+        android:name="com.shoppinggate.Activites.Language"
+        android:label="@string/language"
+        tools:layout="@layout/activity_language" />
+
+    <activity
+        android:id="@+id/nav_sharewithfriends"
         android:name="com.shoppinggate.Activites.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="com.shoppinggate.Activites.ui.send.SendFragment"
         android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        tools:layout="@layout/activity_share_with_friends" />
+
+    <activity
+        android:id="@+id/nav_rateus"
+        android:name="com.shoppinggate.Activites.RateUs"
+        android:label="@string/rateus"
+        tools:layout="@layout/activity_rate_us" />
 </navigation>

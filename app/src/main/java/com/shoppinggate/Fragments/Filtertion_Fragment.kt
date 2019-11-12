@@ -12,14 +12,14 @@ import com.shoppinggate.R
 /**
  * A simple [Fragment] subclass.
  */
-class AllOffers : Fragment() {
+class Filtertion_Fragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_all_offers, container, false)
+        return inflater.inflate(R.layout.fragment_filtertion_, container, false)
     }
 
 

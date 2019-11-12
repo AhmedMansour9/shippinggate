@@ -13,11 +13,20 @@
             android:id="@+id/nav_AllCategories"
             android:title="@string/allcategories" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_mywishlist"
+            android:title="@string/mywishlist" />
         <item
-            android:id="@+id/nav_tools"
-            android:title="@string/menu_tools" />
+            android:id="@+id/nav_myorders"
+            android:title="@string/myorders" />
+        <item
+            android:id="@+id/nav_language"
+            android:title="@string/language" />
+        <item
+            android:id="@+id/nav_sharewithfriends"
+            android:title="@string/sharewithfriends" />
+        <item
+            android:id="@+id/nav_rateus"
+            android:title="@string/rateus" />
     </group>
 
 

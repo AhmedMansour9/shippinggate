@@ -11,22 +11,22 @@ import androidx.core.view.GravityCompat
 import com.shoppinggate.Activites.Navigation
 
 import com.shoppinggate.R
-import kotlinx.android.synthetic.main.fragment_allpopular_products.view.*
-import kotlinx.android.synthetic.main.fragment_categories.view.*
+import kotlinx.android.synthetic.main.fragment_my_orders.view.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class AllpopularProducts : Fragment() {
-    var root:View?=null
-
+class MyWishlist_Fragment : Fragment() {
+     lateinit var root:View
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        root= inflater.inflate(R.layout.fragment_allpopular_products, container, false)
-         init()
+        root= inflater.inflate(R.layout.fragment_my_wishlist_, container, false)
+        init()
+
+
 
         return root
     }
@@ -34,7 +34,7 @@ class AllpopularProducts : Fragment() {
         val toggle = ActionBarDrawerToggle(
             activity,
             Navigation.drawerLayout,
-            root!!.toolbarpopularproducts,
+            root!!.toolbarMyorders,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
@@ -47,6 +47,5 @@ class AllpopularProducts : Fragment() {
         Navigation.drawerLayout?.addDrawerListener(toggle)
 
     }
-
 
 }

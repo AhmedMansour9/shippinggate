@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbardetails"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/darkblue"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="#fff"
+                        android:text="@string/details"
+                        android:textStyle="bold"
+                        android:layout_centerInParent="true"
+                       android:id="@+id/Title"
+                        />
+                    <ImageView
+                        android:id="@+id/icon_cart"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        app:srcCompat="@drawable/icon_carthome" />
+
+
+
+                </RelativeLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180sdp"
+                android:layout_below="@+id/toolbardetails"
+                android:id="@+id/SwipDetails"
+                >
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbarHome">
+
+
+                </androidx.viewpager.widget.ViewPager>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            <RelativeLayout
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:alpha=".5"
+                android:background="#ffd298"
+                android:layout_below="@+id/toolbardetails">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100 off"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_8sdp"
+                    android:textColor="#000"
+                    android:layout_centerInParent="true"
+                    />
+
+
+            </RelativeLayout>
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/view_pager_circle_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_160sdp"
+                app:ci_height="7dp"
+                app:ci_width="7dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#e4e3e6"
+                android:id="@+id/view_one"
+                android:layout_below="@+id/SwipDetails"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_one"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#10435f"
+                android:text="akjskahsjashjshdjdhs"
+                android:id="@+id/small_discrption"
+                android:layout_marginEnd="@dimen/_40sdp"
+
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#e4e3e6"
+                android:id="@+id/view_two"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_below="@+id/small_discrption"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/view_one"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/icon_favourit"
+
+                android:layout_marginEnd="@dimen/_10sdp"
+                />
+
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_below="@+id/view_two"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressTint="#ffb558"
+                android:transformPivotX="0dp"
+                android:progressBackgroundTint="#000"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="(100)"
+                android:layout_toEndOf="@+id/rating_bar"
+                android:layout_below="@+id/view_two"
+                android:textColor="#ffbb65"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_10sdp"
+                android:id="@+id/TotalRate"
+
+                />
+
+
+            <TextView
+                android:id="@+id/T_OrignalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_below="@+id/rating_bar"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_alignParentEnd="true"
+                android:maxLines="1"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:textColor="#d1d1d1"
+                android:textSize="18sp"
+                android:text="100 $"
+
+                />
+            <TextView
+                android:id="@+id/T_Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:maxLines="1"
+                android:layout_below="@+id/rating_bar"
+                android:text="100 $"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textColor="#10435f"
+                android:textSize="18sp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#e4e3e6"
+                android:id="@+id/view_three"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_below="@+id/T_Price"
+                />
+
+            <TextView
+                android:id="@+id/Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:maxLines="1"
+                android:layout_below="@+id/view_three"
+                android:text="@string/descrption"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textColor="#10435f"
+                android:textSize="18sp"
+                />
+
+
+            <TextView
+                android:id="@+id/T_Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:maxLines="8"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_below="@+id/Description"
+                android:text="@string/descrption"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textColor="#a1a1a1"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:textColor="#fff"
+                android:background="#ffb558"
+                android:textStyle="bold"
+                android:id="@+id/T_addtocart"
+                android:layout_below="@+id/T_Description"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/addtocart"
+                android:gravity="center"
+
+                />
+            <TextView
+                android:id="@+id/solid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:maxLines="1"
+                android:layout_below="@+id/T_addtocart"
+                android:text="@string/solidby"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textColor="#a1a1a1"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/T_solid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:maxLines="1"
+                android:layout_below="@+id/solid"
+                android:text="dlsaklkff"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:textColor="#10435f"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/sellernote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:maxLines="1"
+                android:layout_below="@+id/T_solid"
+                android:text="@string/sellernote"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="#a1a1a1"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/T_sellernote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:maxLines="1"
+                android:layout_below="@+id/sellernote"
+                android:text="ahmeeeeeeeeeeeed"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:textColor="#10435f"
+                android:textSize="15sp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#e4e3e6"
+                android:id="@+id/view_four"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_below="@+id/T_sellernote"
+                />
+
+            <TextView
+                android:id="@+id/review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:maxLines="1"
+                android:layout_below="@+id/view_four"
+                android:text="@string/reviwes"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="#10435f"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/Write_Review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:maxLines="1"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/view_four"
+                android:text="@string/writereview"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="#ffb558"
+                android:textSize="18sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_ReviwesProducts"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_below="@+id/Write_Review"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#e4e3e6"
+                android:id="@+id/view_five"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_below="@+id/recycler_ReviwesProducts"
+                />
+
+            <TextView
+                android:id="@+id/peopleviwes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:maxLines="1"
+                android:layout_below="@+id/view_five"
+                android:text="@string/peoplealseviwed"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textColor="#10435f"
+                android:textSize="18sp"
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_eopleviwesProducts"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_below="@+id/peopleviwes"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

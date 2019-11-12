@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#fff">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarpopularproducts"
@@ -24,14 +27,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:text="@string/popularproducts"
                 android:textColor="#fff"
                 android:textStyle="bold"
                 android:layout_marginStart="@dimen/_55sdp"
-
+               android:id="@+id/T_Title"
                 />
             <ImageView
-                android:id="@+id/icon_cart"
+                android:id="@+id/icon_sort"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginTop="16dp"
@@ -49,18 +51,34 @@
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbarCategories"
-        android:id="@+id/SwipHome">
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_below="@+id/toolbarpopularproducts"
+        android:id="@+id/SwipProducts">
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_Categories"
+            android:id="@+id/recycler_Products"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/T_Popularproducts"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
             />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
-</RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Btn_Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_advancedfilter"
+            android:layout_margin="16dp"
+            app:maxImageSize="@dimen/_50sdp"
+            app:fabSize="auto"
+            app:fabCustomSize="@dimen/_50sdp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <include layout="@layout/sortbuttomsheet"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

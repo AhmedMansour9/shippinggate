@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/_150sdp"
+    android:layout_width="@dimen/_145sdp"
+   android:layout_marginEnd="@dimen/_10sdp"
     android:background="@drawable/bc_itemoffer"
     android:layout_height="wrap_content">
-
     <ImageView
         android:layout_width="@dimen/_120sdp"
         android:layout_centerHorizontal="true"
         android:layout_height="@dimen/_110sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:scaleType="fitXY"
         android:id="@+id/img_popular"
         android:src="@drawable/splash"
         android:layout_marginEnd="@dimen/_10sdp"
@@ -18,8 +20,94 @@
         android:layout_height="@dimen/_20sdp"
         android:alpha=".5"
         android:background="#ffd298"
-        android:padding="@dimen/_5sdp"
-        android:textColor="#000"
-        android:layout_alignBottom="@+id/img_popular"/>
+        android:layout_alignBottom="@+id/img_popular">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100 off"
+            android:textStyle="bold"
+            android:textSize="@dimen/_8sdp"
+            android:textColor="#000"
+            android:layout_centerInParent="true"
+            />
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="dfsdfsdfsdfsdfsdfsdfsdffdffdfdsfsdf"
+        android:layout_below="@+id/img_popular"
+        android:textColor="#10435f"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:textSize="@dimen/_10sdp"
+        android:id="@+id/Title"
+        android:layout_marginStart="@dimen/_5sdp"
+
+        />
+
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_below="@+id/Title"
+        android:gravity="start"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressTint="#ffb558"
+        android:transformPivotX="0dp"
+        android:progressBackgroundTint="#000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:text="(100)"
+        android:layout_toEndOf="@+id/rating_bar"
+        android:layout_below="@+id/Title"
+        android:textColor="#10435f"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:textStyle="bold"
+        android:textSize="@dimen/_10sdp"
+        android:id="@+id/TotalRate"
+
+        />
+
+    <TextView
+        android:id="@+id/T_OrignalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_below="@+id/TotalRate"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:maxLines="1"
+        android:textColor="#d1d1d1"
+        android:textSize="12sp"
+        android:text="100 $"
+
+        />
+    <TextView
+        android:id="@+id/T_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:maxLines="1"
+        android:layout_below="@+id/T_OrignalPrice"
+        android:text="100 $"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:textColor="#10435f"
+        android:textSize="12sp"
+        />
 
 </RelativeLayout>
